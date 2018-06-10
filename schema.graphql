@@ -1,0 +1,24 @@
+type User {
+  id: ID!
+  name: String!
+  todos: [Todo]!
+  pendingTodos: [Todo]!
+}
+
+type Todo {
+  id: ID!
+  text: String!
+  done: Boolean!
+  user: User!
+}
+
+type Query {
+  todos: [Todo]!
+  users: [User]!
+}
+
+type Mutation {
+  addUser(name: String!): User!
+  addTodo(text: String!, userId: ID!): Todo!
+  markTodoDone(id: ID!): Todo!
+}

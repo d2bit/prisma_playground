@@ -1,5 +1,19 @@
 version: '2'
 services:
+  app:
+    image: node
+    restart: always
+    ports: 
+      - '4000:4000'
+    working_dir: /app
+    volumes:
+      - .:/app
+    environment:
+      PRISMA_URL: 'http://prisma:4466'
+    depends_on:
+      - prisma
+    command: ['npm', 'start']
+
   prisma:
     image: prismagraphql/prisma:1.8
     restart: always

@@ -1,6 +1,6 @@
 # Playing with [PRISMA](https://www.prisma.io)
 
-## Steps
+## Create PRISMA Steps
 
 1. Install the prisma cli
 
@@ -29,3 +29,8 @@ See the datamodel.graphql
 7. Test some graphql queries
 
 Connect the prisma graphql playground in http://localhost:4466 and get impressed
+
+
+## Create GraphQL server in front of Prisma
+
+TODO xD
