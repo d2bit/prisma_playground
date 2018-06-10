@@ -1,0 +1,11 @@
+type User {
+  id: ID! @unique
+  name: String!
+}
+
+type Todo {
+  id: ID! @unique
+  text: String!
+  done: Boolean @default(value: false)
+  user: User!
+}
